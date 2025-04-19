@@ -65,7 +65,7 @@ jobs:
           # Pass MAX_JOBS=4 because, at time of writing, the VM "only" has 32GB
           # of RAM and OOMs while building if we give it the default number of
           # workers (2 * NUM_CPUs).
-          export CIBW_ENVIRONMENT="MAX_JOBS=2 \
+          export CIBW_ENVIRONMENT="MAX_JOBS=1 \
                   TRITON_BUILD_WITH_CLANG_LLD=1"
 
           # many_linux_2_28 image comes with GCC 12.2.1, but not clang.
