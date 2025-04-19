@@ -9,7 +9,15 @@ permissions: read-all
 jobs:
 
   Build-Wheels:
-    timeout-minutes: 60
+    timeout-minutes: 120
+    runs-on: ${{ matrix.config.runs_on }}
+
+    strategy:
+      fail-fast: false
+      matrix:
+        config:
+        - {runs_on: 'ubuntu-latest', arch: 'x86_64'}
+
 
     runs-on: [self-hosted, CPU]
     permissions:
