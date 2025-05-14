@@ -19,7 +19,6 @@ jobs:
         - {runs_on: 'ubuntu-latest', arch: 'x86_64'}
 
 
-    runs-on: [self-hosted, CPU]
     permissions:
       id-token: write
       contents: read
